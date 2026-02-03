@@ -1,0 +1,11 @@
+{
+  "name": "udp-demo-bugcrowd",
+  "version": "1.0.0",
+  "main": "udp.js",
+  "scripts": {
+    "start": "node udp.js"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
