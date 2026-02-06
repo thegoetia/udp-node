@@ -1,0 +1,22 @@
+applications:
+  node-app:
+    source:
+      root: "/"
+    type: "nodejs:18"
+    
+    # O comando que o Upsun vai usar para iniciar seu script
+    web:
+      commands:
+        start: "npm start"
+      
+      # Se for o script da Webshell, ele precisa expor a porta HTTP
+      # Se for apenas o bot de IRC, o Upsun ainda exige uma porta aberta por padrão
+      locations:
+        "/":
+          passthru: true
+
+    # Define o tamanho do disco e recursos
+    mounts:
+      "/tmp":
+        source: local
+        source_path: "tmp"
